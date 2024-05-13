@@ -1,4 +1,4 @@
-import logo from './washulacrosselogo.jpg';
+import logo from './wulaxlogo.png';
 import './App.css';
 
 function App() {
