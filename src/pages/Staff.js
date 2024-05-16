@@ -1,8 +1,8 @@
 import React from 'react';
-const Alumni = () => {
+const Staff = () => {
     return (
         <div>
-            Alumni
+            Staff
         </div>
     )
 }
