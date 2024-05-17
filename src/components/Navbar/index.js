@@ -12,20 +12,19 @@ const Navbar = () => {
     return (
         <>
             <Nav>
-                <Bars />
-
+                <Bars/>
                 <NavMenu>
-                    <NavLink to="/home" >
+                    <NavLink to="/" >
                         Home
                     </NavLink>
                     <NavLink to="/roster" activeStyle>
                         Roster
                     </NavLink>
-                    <NavLink to="/staff" activeStyle>
-                        Staff
-                    </NavLink>
                     <NavLink to="/schedule" activeStyle>
                         Schedule
+                    </NavLink>
+                    <NavLink to="/staff" activeStyle>
+                        Staff
                     </NavLink>
                     <NavLink to="/news" activeStyle>
                         News

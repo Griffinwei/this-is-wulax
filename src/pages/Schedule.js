@@ -1,8 +1,18 @@
-import React from 'react';
+import React from "react";
+
 const Schedule = () => {
     return (
-        <div>
-            Schedule
+        <div
+            style={{
+                display: "flex",
+                justifyContent: "centre",
+                alignItems: "centre",
+                height: "100vh",
+            }}
+        >
+            <h1>Schedule</h1>
         </div>
-    )
-}
+    );
+};
+
+export default Schedule;
