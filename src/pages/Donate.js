@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+const Donate = () => {
   return (
     <div
       style={{
@@ -13,15 +13,9 @@ const Home = () => {
         padding: "18px"
       }}
     >
-      <h1>
-        Official website of the WashU Men's Lacrosse team.{"\n"}
-      <h5>
-        Our website is currently in development, so stay tuned for further updates...
-        </h5>
-      </h1>
-      
+      <h1>Coming soon...</h1>
     </div>
   );
 };
 
-export default Home;
+export default Donate;

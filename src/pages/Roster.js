@@ -8,9 +8,12 @@ const Roster = () => {
                 justifyContent: "centre",
                 alignItems: "centre",
                 height: "100vh",
+                backgroundColor: "#e3e3e3",
+                margin: "24px",
+                padding: "18px"
             }}
         >
-            <h1>Roster</h1>
+            <h1>Coming soon...</h1>
         </div>
     );
 };

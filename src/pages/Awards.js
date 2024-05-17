@@ -1,6 +1,6 @@
 import React from "react";
 
-const News = () => {
+const Awards = () => {
     return (
         <div
             style={{
@@ -8,11 +8,14 @@ const News = () => {
                 justifyContent: "centre",
                 alignItems: "centre",
                 height: "100vh",
+                backgroundColor: "#e3e3e3",
+                margin: "24px",
+                padding: "18px"
             }}
         >
-            <h1>News</h1>
+            <h1>Coming soon...</h1>
         </div>
     );
 };
 
-export default News;
+export default Awards;

@@ -10,11 +10,11 @@ import Home from "./pages";
 import Roster from "./pages/Roster";
 import Schedule from "./pages/Schedule";
 import Staff from "./pages/Staff";
-import News from "./pages/News";
-import Gallery from "./pages/Gallery";
+import Media from "./pages/Media";
 import Recruiting from "./pages/Recruiting";
-import Alumni from "./pages/Alumni";
+import Awards from "./pages/Awards";
 import Shop from "./pages/Shop";
+import Donate from "./pages/Donate";
 
 function App() {
     return (
@@ -31,14 +31,14 @@ function App() {
                     path="/staff"
                     element={<Staff />}
                 />
-                <Route path="/news" element={<News />} />
-                <Route path="/gallery" element={<Gallery />} />
+                <Route path="/media" element={<Media />} />
                 <Route
                     path="/recruiting"
                     element={<Recruiting />}
                 />
-                <Route path="/alumni" element={<Alumni />} />
+                <Route path="/awards" element={<Awards />} />
                 <Route path="/shop" element={<Shop />} />
+                <Route path="/donate" element={<Donate />} />
             </Routes>
         </Router>
     );
