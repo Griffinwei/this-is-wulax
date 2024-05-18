@@ -1,4 +1,70 @@
+/* General navbar styles */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333; /* Adjust as needed */
+}
+
 .logoClass {
-    max-width: 166px; /* Set your desired maximum width */
-    height: auto; /* Maintain aspect ratio */
+    height: 100px; /* Adjust as needed */
+}
+
+.bars {
+    display: none; /* Initially hide the hamburger icon */
+}
+
+/* Navbar menu styles for larger screens */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.nav-menu a {
+    padding: 1rem;
+    text-decoration: none;
+    color: white; /* Adjust as needed */
+}
+
+.nav-menu a:hover {
+    background-color: #555; /* Adjust as needed */
+}
+
+/* Dropdown menu styles for smaller screens */
+.nav-menu.dropdown {
+    display: none; /* Initially hide the dropdown menu */
+    flex-direction: column;
+    position: absolute;
+    top: 75px; /* Adjust based on your navbar height */
+    right: 0;
+    background-color: white; /* or any other background color */
+    width: 48%; /* Full width */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Optional for a shadow effect */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.nav-menu.dropdown.active {
+    display: flex;
+}
+
+.nav-menu.dropdown a {
+    padding: 1rem;
+    text-decoration: none;
+    color: black; /* Adjust as needed */
+}
+
+.nav-menu.dropdown a:hover {
+    background-color: #ddd; /* Adjust as needed */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Hide the regular navbar menu */
+    }
+    .bars {
+        display: block; /* Show the hamburger icon */
+    }
 }
