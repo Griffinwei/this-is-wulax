@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";  // Correct import path
 
 const Recruiting = () => {
   const [formData, setFormData] = useState({
@@ -22,32 +24,22 @@ const Recruiting = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://your-worker-url.workers.dev', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+      const docRef = await addDoc(collection(db, "recruits"), formData);
+      console.log("Document written with ID: ", docRef.id);
+      setSubmitted(true);
+      setFormData({
+        name: '',
+        hometown: '',
+        graduatingYear: '',
+        position: '',
+        phoneNumber: '',
+        washUEmail: '',
+        emergencyContactName: '',
+        emergencyContactPhone: '',
+        emergencyContactEmail: ''
       });
-      if (response.ok) {
-        console.log('Data stored successfully');
-        setSubmitted(true);
-        setFormData({
-          name: '',
-          hometown: '',
-          graduatingYear: '',
-          position: '',
-          phoneNumber: '',
-          washUEmail: '',
-          emergencyContactName: '',
-          emergencyContactPhone: '',
-          emergencyContactEmail: ''
-        });
-      } else {
-        console.error('Failed to store form data');
-      }
     } catch (error) {
-      console.error('Error storing form data: ', error);
+      console.error("Error adding document: ", error);
     }
   };
 
@@ -91,7 +83,7 @@ const Recruiting = () => {
         >
           <h1 style={{ textAlign: "center" }}>Recruitment Form</h1>
           <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
-            <label style={{}}>
+            <label>
               Name:{" "}
               <input type="text" name="name" value={formData.name} onChange={handleChange} required />
             </label>
