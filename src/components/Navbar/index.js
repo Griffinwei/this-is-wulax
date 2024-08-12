@@ -40,10 +40,10 @@ function Navbar() {
                     <NavLink to="/" activeStyle>
                         Home
                     </NavLink>
-                    <NavLink to="#" onClick={openRoster} className="white-text">
+                    <NavLink to="#" onClick={openRoster} className="desktop-link">
                         Roster
                     </NavLink>
-                    <NavLink to="#" onClick={openSchedule} className="white-text">
+                    <NavLink to="#" onClick={openSchedule} className="desktop-link">
                         Schedule
                     </NavLink>
                     <NavLink to="/staff" activeStyle>
@@ -67,10 +67,10 @@ function Navbar() {
                     <NavLink to="/" onClick={toggleMenu}>
                         Home
                     </NavLink>
-                    <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="white-text">
+                    <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">
                         Roster
                     </NavLink>
-                    <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="white-text">
+                    <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">
                         Schedule
                     </NavLink>
                     <NavLink to="/staff" onClick={toggleMenu}>

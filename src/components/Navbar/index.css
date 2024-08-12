@@ -27,9 +27,11 @@
     text-decoration: none;
     color: white; /* Adjust as needed */
 }
-.white-text {
-    color: white !important;
+
+.desktop-link {
+    color: white !important; /* Ensure Roster and Schedule are white on desktop */
 }
+
 .nav-menu a:hover {
     background-color: #555; /* Adjust as needed */
 }
@@ -54,7 +56,11 @@
 .nav-menu.dropdown a {
     padding: 1rem;
     text-decoration: none;
-    color: black; /* Adjust as needed */
+    color: black; /* Ensure text is black in dropdown menu */
+}
+
+.mobile-link {
+    color: black !important; /* Ensure Roster and Schedule are black on mobile */
 }
 
 .nav-menu.dropdown a:hover {
