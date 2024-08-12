@@ -17,6 +17,16 @@ function Navbar() {
         setIsOpen(!isOpen);
     };
 
+    // Function to open the Roster page in a new tab
+    const openRoster = () => {
+        window.open('https://mcla.us/team/washington_st_louis/2024/roster.html', '_blank');
+    };
+
+    // Function to open the Schedule page in a new tab
+    const openSchedule = () => {
+        window.open('https://mcla.us/team/washington_st_louis/2024/schedule.html', '_blank');
+    };
+
     return (
         <>
             <Nav>
@@ -30,10 +40,10 @@ function Navbar() {
                     <NavLink to="/" activeStyle>
                         Home
                     </NavLink>
-                    <NavLink to="/roster" activeStyle>
+                    <NavLink to="#" onClick={openRoster} className="white-text">
                         Roster
                     </NavLink>
-                    <NavLink to="/schedule" activeStyle>
+                    <NavLink to="#" onClick={openSchedule} className="white-text">
                         Schedule
                     </NavLink>
                     <NavLink to="/staff" activeStyle>
@@ -41,9 +51,6 @@ function Navbar() {
                     </NavLink>
                     <NavLink to="/media" activeStyle>
                         Media
-                    </NavLink>
-                    <NavLink to="/awards" activeStyle>
-                        Awards
                     </NavLink>
                     <NavLink to="/recruiting" activeStyle>
                         Recruiting
@@ -60,28 +67,25 @@ function Navbar() {
                     <NavLink to="/" onClick={toggleMenu}>
                         Home
                     </NavLink>
-                    <NavLink to="/roster" onClick={toggleMenu} activeStyle>
+                    <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="white-text">
                         Roster
                     </NavLink>
-                    <NavLink to="/schedule" onClick={toggleMenu} activeStyle>
+                    <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="white-text">
                         Schedule
                     </NavLink>
-                    <NavLink to="/staff" onClick={toggleMenu} activeStyle>
+                    <NavLink to="/staff" onClick={toggleMenu}>
                         Staff & Leadership
                     </NavLink>
-                    <NavLink to="/media" onClick={toggleMenu} activeStyle>
+                    <NavLink to="/media" onClick={toggleMenu}>
                         Media
                     </NavLink>
-                    <NavLink to="/awards" onClick={toggleMenu} activeStyle>
-                        Awards
-                    </NavLink>
-                    <NavLink to="/recruiting" onClick={toggleMenu} activeStyle>
+                    <NavLink to="/recruiting" onClick={toggleMenu}>
                         Recruiting
                     </NavLink>
-                    <NavLink to="/shop" onClick={toggleMenu} activeStyle>
+                    <NavLink to="/shop" onClick={toggleMenu}>
                         Shop
                     </NavLink>
-                    <NavLink to="/donate" onClick={toggleMenu} activeStyle>
+                    <NavLink to="/donate" onClick={toggleMenu}>
                         Donate
                     </NavLink>
                 </NavMenu>

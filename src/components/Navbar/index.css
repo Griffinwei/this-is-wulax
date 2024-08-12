@@ -27,7 +27,9 @@
     text-decoration: none;
     color: white; /* Adjust as needed */
 }
-
+.white-text {
+    color: white !important;
+}
 .nav-menu a:hover {
     background-color: #555; /* Adjust as needed */
 }
