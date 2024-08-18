@@ -17,7 +17,7 @@ const Home = () => {
         boxSizing: "border-box"       // Include padding and border in the element's total width and height
       }}
     >
-      <img src={teamPhotto} style={{ width: '100%', height: 'auto'}} alt="Photo" />
+      <img src={teamPhotto} style={{ width: '100%', height: 'auto'}} alt="WULAX" />
       <h1 style={{ margin: '20px 0 0 0' }}> {/* Margin top: 20px, bottom: 0 */}
         Welcome to the official website of WashU Lacrosse!
       </h1>
