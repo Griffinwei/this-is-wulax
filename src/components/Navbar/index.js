@@ -7,87 +7,52 @@ import {
     NavMenu
 } from "./navbarStyling";
 import "./index.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faXTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Navbar() {
-    // State to manage the visibility of the dropdown menu
     const [isOpen, setIsOpen] = useState(false);
-
-    // Function to toggle the dropdown menu
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
-    // Function to open the Roster page in a new tab
-    const openRoster = () => {
-        window.open('https://mcla.us/team/washington_st_louis/2024/roster.html', '_blank');
-    };
-
-    // Function to open the Schedule page in a new tab
-    const openSchedule = () => {
-        window.open('https://mcla.us/team/washington_st_louis/2024/schedule.html', '_blank');
-    };
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const openRoster = () => window.open('https://mcla.us/team/washington_st_louis/2024/roster.html', '_blank');
+    const openSchedule = () => window.open('https://mcla.us/team/washington_st_louis/2024/schedule.html', '_blank');
 
     return (
         <>
             <Nav>
-                <div>
+                <div className="social-media-icons">
+                    <a href="https://facebook.com/wulax/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <FontAwesomeIcon icon={faFacebookF} className="social-media-icon" />
+                    </a>
+                    <a href="https://twitter.com/washumenslax?lang=en" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <FontAwesomeIcon icon={faXTwitter} className="social-media-icon" />
+                    </a>
+                    <a href="https://www.instagram.com/wustlmlacrosse/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <FontAwesomeIcon icon={faInstagram} className="social-media-icon" />
+                    </a>
+                </div>
+                <div className="logo-container">
                     <img src={logo} alt="Logo" className="logoClass"/>
                 </div>
-                {/* Hamburger menu for smaller screens */}
                 <Bars onClick={toggleMenu} className="bars" />
-                {/* Regular navbar menu for larger screens */}
                 <NavMenu className="nav-menu">
-                    <NavLink to="/" activeStyle>
-                        Home
-                    </NavLink>
-                    <NavLink to="#" onClick={openRoster} className="desktop-link">
-                        Roster
-                    </NavLink>
-                    <NavLink to="#" onClick={openSchedule} className="desktop-link">
-                        Schedule
-                    </NavLink>
-                    <NavLink to="/staff" activeStyle>
-                        Staff & Leadership
-                    </NavLink>
-                    <NavLink to="/media" activeStyle>
-                        Media
-                    </NavLink>
-                    <NavLink to="/recruiting" activeStyle>
-                        Recruiting
-                    </NavLink>
-                    <NavLink to="/shop" activeStyle>
-                        Shop
-                    </NavLink>
-                    <NavLink to="/donate" activeStyle>
-                        Donate
-                    </NavLink>
+                    <NavLink to="/" activeStyle>Home</NavLink>
+                    <NavLink to="#" onClick={openRoster} className="desktop-link">Roster</NavLink>
+                    <NavLink to="#" onClick={openSchedule} className="desktop-link">Schedule</NavLink>
+                    <NavLink to="/staff" activeStyle>Staff & Leadership</NavLink>
+                    <NavLink to="/media" activeStyle>Media</NavLink>
+                    <NavLink to="/recruiting" activeStyle>Recruiting</NavLink>
+                    <NavLink to="/shop" activeStyle>Shop</NavLink>
+                    <NavLink to="/donate" activeStyle>Donate</NavLink>
                 </NavMenu>
-                {/* Dropdown menu for smaller screens */}
                 <NavMenu className={`nav-menu dropdown ${isOpen ? 'active' : ''}`}>
-                    <NavLink to="/" onClick={toggleMenu}>
-                        Home
-                    </NavLink>
-                    <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">
-                        Roster
-                    </NavLink>
-                    <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">
-                        Schedule
-                    </NavLink>
-                    <NavLink to="/staff" onClick={toggleMenu}>
-                        Staff & Leadership
-                    </NavLink>
-                    <NavLink to="/media" onClick={toggleMenu}>
-                        Media
-                    </NavLink>
-                    <NavLink to="/recruiting" onClick={toggleMenu}>
-                        Recruiting
-                    </NavLink>
-                    <NavLink to="/shop" onClick={toggleMenu}>
-                        Shop
-                    </NavLink>
-                    <NavLink to="/donate" onClick={toggleMenu}>
-                        Donate
-                    </NavLink>
+                    <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+                    <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">Roster</NavLink>
+                    <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
+                    <NavLink to="/staff" onClick={toggleMenu}>Staff & Leadership</NavLink>
+                    <NavLink to="/media" onClick={toggleMenu}>Media</NavLink>
+                    <NavLink to="/recruiting" onClick={toggleMenu}>Recruiting</NavLink>
+                    <NavLink to="/shop" onClick={toggleMenu}>Shop</NavLink>
+                    <NavLink to="/donate" onClick={toggleMenu}>Donate</NavLink>
                 </NavMenu>
             </Nav>
         </>

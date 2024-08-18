@@ -67,6 +67,22 @@
     background-color: #ddd; /* Adjust as needed */
 }
 
+.social-media-icons {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.social-media-icons a {
+    margin: 3px; /* Add vertical spacing between icons */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Optional: Adjust icon size and color */
+.social-media-icon {
+    color: black; /* Set the color of the icons to black */
+    font-size: 150%; /* Increase the size by 50% */
+}
+
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -75,4 +91,11 @@
     .bars {
         display: block; /* Show the hamburger icon */
     }
+    /* Example media query for smaller screens */
+
+    .social-media-icons {
+        top: 10%; /* Adjust vertical alignment for smaller screens if needed */
+    }
+
+
 }
