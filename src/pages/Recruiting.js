@@ -66,7 +66,8 @@ const Recruiting = () => {
         alignItems: "center",
         minHeight: "100vh",
         backgroundColor: "#e3e3e3",
-        padding: "24px"
+        padding: "18px",
+        margin: "24px"
       }}
     >
       {!submitted ? (
