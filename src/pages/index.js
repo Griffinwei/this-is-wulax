@@ -36,7 +36,7 @@ const Home = () => {
       <h2>
         For prospective players:
           <br/>1. Come see us at the activity fair on August 30th from 3-5PM @ Mudd Field!
-          <br/>2. Register yourself as a member of the team <a href="https://wustl.presence.io/organization/sports-club-mens-lacrosse/join" target="_blank" rel="noopener noreferrer">here</a>.
+          <br/>2. Register yourself as a member of the team with <a href="https://wustl.presence.io/organization/sports-club-mens-lacrosse/join" target="_blank" rel="noopener noreferrer">WUGO</a> and <a href="https://washu.dserec.com/online/clubsports_widget/club/15/registration" target="_blank" rel="noopener noreferrer">DSE</a>.
           <br/>3. If you have gear at home, try and get it shipped to school (otherwise we have extra gear in our locker room).
       </h2>
     </div>
