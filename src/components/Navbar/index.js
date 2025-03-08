@@ -13,9 +13,9 @@ import { faFacebookF, faXTwitter, faInstagram } from '@fortawesome/free-brands-s
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
-    const openRoster = () => window.open('https://mcla.us/team/washington_st_louis/2024/roster.html', '_blank');
-    const openSchedule = () => window.open('https://mcla.us/team/washington_st_louis/2024/schedule.html', '_blank');
-
+    const openRoster = () => window.open('https://mcla.us/team/washington_st_louis/2025/roster.html', '_blank');
+    const openSchedule = () => window.open('https://mcla.us/team/washington_st_louis/2025/schedule.html', '_blank');
+    const openShop = () => window.open('https://teamlocker.squadlocker.com/#/lockers/washu-lacrosse', '_blank');
     return (
         <>
             <Nav>
@@ -41,7 +41,7 @@ function Navbar() {
                     <NavLink to="/staff" activeStyle>Staff & Leadership</NavLink>
                     <NavLink to="/media" activeStyle>Media</NavLink>
                     <NavLink to="/recruiting" activeStyle>Recruiting</NavLink>
-                    <NavLink to="/shop" activeStyle>Shop</NavLink>
+                    <NavLink to="#" onClick={openShop} className="desktop-link">Shop</NavLink>
                     <NavLink to="/donate" activeStyle>Donate</NavLink>
                 </NavMenu>
                 <NavMenu className={`nav-menu dropdown ${isOpen ? 'active' : ''}`}>
@@ -51,7 +51,7 @@ function Navbar() {
                     <NavLink to="/staff" onClick={toggleMenu}>Staff & Leadership</NavLink>
                     <NavLink to="/media" onClick={toggleMenu}>Media</NavLink>
                     <NavLink to="/recruiting" onClick={toggleMenu}>Recruiting</NavLink>
-                    <NavLink to="/shop" onClick={toggleMenu}>Shop</NavLink>
+                    <NavLink to="#" onClick={() => { openShop(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
                     <NavLink to="/donate" onClick={toggleMenu}>Donate</NavLink>
                 </NavMenu>
             </Nav>

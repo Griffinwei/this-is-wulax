@@ -13,13 +13,7 @@ const Shop = () => {
                 padding: "18px"
             }}
         >
-            <iframe 
-                src="https://teamlocker.squadlocker.com/#/lockers/washu-lacrosse" 
-                width="100%" 
-                height="800px" 
-                style={{ border: 'none' }}
-                title="External Content"
-            />
+            <h1>Coming soon...</h1>
         </div>
     );
 };
