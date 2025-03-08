@@ -7,6 +7,28 @@
     background-color: #333; /* Adjust as needed */
 }
 
+/* Logo container */
+.logo-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Diagonal divider */
+/* Slanted divider */
+/* Slanted divider */
+.slanted-divider {
+    width:320px; /* Doubled width */
+    height: 100px; /* Match navbar height */
+    background-color: inherit; /* Inherits background color from the navbar */
+    transform: skewX(-25deg); /* Keeps the slant effect */
+    margin-left: -20px; /* Adjust for new width */
+}
+
+
+
+
+
 .logoClass {
     height: 100px; /* Adjust as needed */
 }

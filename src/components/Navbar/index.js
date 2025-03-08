@@ -16,6 +16,7 @@ function Navbar() {
     const openRoster = () => window.open('https://mcla.us/team/washington_st_louis/2025/roster.html', '_blank');
     const openSchedule = () => window.open('https://mcla.us/team/washington_st_louis/2025/schedule.html', '_blank');
     const openShop = () => window.open('https://teamlocker.squadlocker.com/#/lockers/washu-lacrosse', '_blank');
+
     return (
         <>
             <Nav>
@@ -30,12 +31,19 @@ function Navbar() {
                         <FontAwesomeIcon icon={faInstagram} className="social-media-icon" />
                     </a>
                 </div>
+
                 <div className="logo-container">
-                    <img src={logo} alt="Logo" className="logoClass"/>
+                    {/* Only the logo is clickable */}
+                    <NavLink to="/">
+                        <img src={logo} alt="Logo" className="logoClass"/>
+                    </NavLink>
+                    {/* Slanted divider remains separate and non-clickable */}
+                    <div className="slanted-divider"></div>
                 </div>
+
                 <Bars onClick={toggleMenu} className="bars" />
+
                 <NavMenu className="nav-menu">
-                    <NavLink to="/" activeStyle>Home</NavLink>
                     <NavLink to="#" onClick={openRoster} className="desktop-link">Roster</NavLink>
                     <NavLink to="#" onClick={openSchedule} className="desktop-link">Schedule</NavLink>
                     <NavLink to="/staff" activeStyle>Staff & Leadership</NavLink>
@@ -44,14 +52,14 @@ function Navbar() {
                     <NavLink to="#" onClick={openShop} className="desktop-link">Shop</NavLink>
                     <NavLink to="/donate" activeStyle>Donate</NavLink>
                 </NavMenu>
+
                 <NavMenu className={`nav-menu dropdown ${isOpen ? 'active' : ''}`}>
-                    <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
                     <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">Roster</NavLink>
                     <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
                     <NavLink to="/staff" onClick={toggleMenu}>Staff & Leadership</NavLink>
                     <NavLink to="/media" onClick={toggleMenu}>Media</NavLink>
                     <NavLink to="/recruiting" onClick={toggleMenu}>Recruiting</NavLink>
-                    <NavLink to="#" onClick={() => { openShop(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
+                    <NavLink to="#" onClick={() => { openShop(); toggleMenu(); }} className="mobile-link">Shop</NavLink>
                     <NavLink to="/donate" onClick={toggleMenu}>Donate</NavLink>
                 </NavMenu>
             </Nav>
