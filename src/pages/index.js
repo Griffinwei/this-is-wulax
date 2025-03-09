@@ -31,7 +31,7 @@ const Home = () => {
         }}
       >
         <h1>THE FACE OF COLLEGE LACROSSE IN ST. LOUIS</h1>
-        <h4>Washington University's Men's Lacrosse (or WULAX, for short) was founded in 1997 with the mission to provide a lacrosse community to WashU students that emphasizes accessibility, community, and competition. We are proud members of the Men's Collegiate Lacrosse Association (
+        <h4>Washington University's Men's Lacrosse (or WULAX, for short) was founded in 1997 with the mission to bring a lacrosse team to WashU that emphasizes accessibility, community, and competition. We are proud members of the Men's Collegiate Lacrosse Association (
         <a href="https://mcla.us" target="_blank" rel="noopener noreferrer">
           MCLA
         </a>
