@@ -7,7 +7,6 @@ import {
     Route,
 } from "react-router-dom";
 import Home from "./pages";
-import Staff from "./pages/Staff";
 import Media from "./pages/Media";
 import Recruiting from "./pages/Recruiting";
 import Shop from "./pages/Shop";
@@ -19,7 +18,6 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/staff" element={<Staff />} />
                 <Route path="/media" element={<Media />} />
                 <Route path="/recruiting" element={<Recruiting />} />
                 <Route path="/shop" element={<Shop />} />

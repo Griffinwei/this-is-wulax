@@ -38,7 +38,6 @@ function Navbar() {
                     <NavLink to="/" activeStyle>Home</NavLink>
                     <NavLink to="#" onClick={openRoster} className="desktop-link">Roster</NavLink>
                     <NavLink to="#" onClick={openSchedule} className="desktop-link">Schedule</NavLink>
-                    <NavLink to="/staff" activeStyle>Staff & Leadership</NavLink>
                     <NavLink to="/media" activeStyle>Media</NavLink>
                     <NavLink to="/recruiting" activeStyle>Recruiting</NavLink>
                     <NavLink to="#" onClick={openShop} className="desktop-link">Shop</NavLink>
@@ -48,7 +47,6 @@ function Navbar() {
                     <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
                     <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">Roster</NavLink>
                     <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
-                    <NavLink to="/staff" onClick={toggleMenu}>Staff & Leadership</NavLink>
                     <NavLink to="/media" onClick={toggleMenu}>Media</NavLink>
                     <NavLink to="/recruiting" onClick={toggleMenu}>Recruiting</NavLink>
                     <NavLink to="#" onClick={() => { openShop(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
