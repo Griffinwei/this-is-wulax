@@ -39,7 +39,7 @@ function Navbar() {
                     <NavLink to="#" onClick={openRoster} className="desktop-link">Roster</NavLink>
                     <NavLink to="#" onClick={openSchedule} className="desktop-link">Schedule</NavLink>
                     <NavLink to="/media" activeStyle>Media</NavLink>
-                    <NavLink to="/recruiting" activeStyle>Recruiting</NavLink>
+                    <NavLink to="/recruiting" activeStyle>Interested Players</NavLink>
                     <NavLink to="#" onClick={openShop} className="desktop-link">Shop</NavLink>
                     <NavLink to="/donate" activeStyle>Donate</NavLink>
                 </NavMenu>
@@ -48,7 +48,7 @@ function Navbar() {
                     <NavLink to="#" onClick={() => { openRoster(); toggleMenu(); }} className="mobile-link">Roster</NavLink>
                     <NavLink to="#" onClick={() => { openSchedule(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
                     <NavLink to="/media" onClick={toggleMenu}>Media</NavLink>
-                    <NavLink to="/recruiting" onClick={toggleMenu}>Recruiting</NavLink>
+                    <NavLink to="/recruiting" onClick={toggleMenu}>Interested Players</NavLink>
                     <NavLink to="#" onClick={() => { openShop(); toggleMenu(); }} className="mobile-link">Schedule</NavLink>
                     <NavLink to="/donate" onClick={toggleMenu}>Donate</NavLink>
                 </NavMenu>

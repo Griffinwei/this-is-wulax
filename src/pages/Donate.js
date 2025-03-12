@@ -3,19 +3,18 @@ import React from 'react';
 const Donate = () => {
   return (
     <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",  // Adjusted to move content higher
-        alignItems: "center",
-        height: "100vh",
-        backgroundColor: "#e3e3e3",
-        margin: "24px",
-        padding: "18px",
-        textAlign: "center",
-        paddingTop: "50px"  // Added padding to move content down slightly
-      }}
-    >
+            style={{
+                flexDirection: "column",
+                display: "flex",
+                justifyContent: "flex-start", // Align items to the start (top) of the container
+                alignItems: "center",         // Center items horizontally
+                minHeight: "100vh",           // Ensure the container takes at least the full viewport height
+                margin: "18px",                    // Remove margin from the container
+                textAlign: "center",
+                padding: "18px",
+                boxSizing: "border-box"       // Include padding and border in the element's total width and height
+            }}
+        >
       <h2 style={{ fontSize: "24px", marginBottom: "20px" }}>
         You can donate to our club by entering the designation "WashU Men's Club Lacrosse" and providing a dollar amount in the form below. We greatly appreciate all donations, as it helps us keep our club running.
       </h2>

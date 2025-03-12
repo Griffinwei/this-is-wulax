@@ -30,12 +30,12 @@ const Home = () => {
           height: 'auto'        // Include padding and border in the element's total width and height
         }}
       >
-        <h1>THE FACE OF COLLEGE LACROSSE IN ST. LOUIS</h1>
-        <h4>Washington University Men's Lacrosse (or WULAX, for short) was founded in 1997 with the mission to provide an accessible lacrosse community to WashU students that emphasizes brotherhood and competition. We are proud members of the Men's Collegiate Lacrosse Association (
+        <h1>THE HOME OF COLLEGE LACROSSE IN ST. LOUIS</h1>
+        <h3>Washington University Men's Lacrosse (or WULAX, for short) was founded in 1997 with the mission to provide an accessible lacrosse community to WashU students that emphasizes brotherhood and competition. We are proud members of the Men's Collegiate Lacrosse Association (
         <a href="https://mcla.us" target="_blank" rel="noopener noreferrer">
           MCLA
         </a>
-        ) and compete in the Lone Star Alliance conference.</h4>
+        ) and compete in the Lone Star Alliance conference.</h3>
       </div>
     </div>
   );

@@ -10,19 +10,25 @@ const Recruiting = () => {
     position: '',
     phoneNumber: '',
     washUEmail: '',
+    studentID: '',
     emergencyContactName: '',
     emergencyContactPhone: '',
-    emergencyContactEmail: ''
+    emergencyContactEmail: '',
+    additionalComments: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({ 
+      ...formData, 
+      [name]: value 
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log("Form submitted with data: ", formData); // Log form data
     try {
       const docRef = await addDoc(collection(db, "recruits"), formData);
       console.log("Document written with ID: ", docRef.id);
@@ -34,9 +40,11 @@ const Recruiting = () => {
         position: '',
         phoneNumber: '',
         washUEmail: '',
+        studentID: '',
         emergencyContactName: '',
         emergencyContactPhone: '',
-        emergencyContactEmail: ''
+        emergencyContactEmail: '',
+        additionalComments: ''
       });
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -52,22 +60,26 @@ const Recruiting = () => {
       position: '',
       phoneNumber: '',
       washUEmail: '',
+      studentID: '',
       emergencyContactName: '',
       emergencyContactPhone: '',
-      emergencyContactEmail: ''
+      emergencyContactEmail: '',
+      additionalComments: ''
     });
   };
 
   return (
     <div
       style={{
+        flexDirection: "column",
         display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        minHeight: "100vh",
-        backgroundColor: "#e3e3e3",
+        justifyContent: "flex-start", // Align items to the start (top) of the container
+        alignItems: "center",         // Center items horizontally
+        minHeight: "100vh",           // Ensure the container takes at least the full viewport height
+        margin: "18px",                    // Remove margin from the container
+        textAlign: "center",
         padding: "18px",
-        margin: "24px"
+        boxSizing: "border-box"       // Include padding and border in the element's total width and height
       }}
     >
       {!submitted ? (
@@ -82,7 +94,7 @@ const Recruiting = () => {
             boxShadow: "0 0 10px rgba(0,0,0,0.1)"
           }}
         >
-          <h1 style={{ textAlign: "center" }}>Recruitment Form</h1>
+          <h1 style={{ textAlign: "center" }}>Player Interest Form</h1>
           <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
             <label>
               Name:{" "}
@@ -104,7 +116,16 @@ const Recruiting = () => {
           <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
             <label>
               Position:{" "}
-              <input type="text" name="position" value={formData.position} onChange={handleChange} required />
+              <select name="position" value={formData.position} onChange={handleChange} required>
+                <option value="">Select Position</option>
+                <option value="Attack">Attack</option>
+                <option value="Midfield">Midfield</option>
+                <option value="Defense">Defense</option>
+                <option value="Goalie">Goalie</option>
+                <option value="FOGO">FOGO</option>
+                <option value="LSM">LSM</option>
+                <option value="SSDM">SSDM</option>
+              </select>
             </label>
           </div>
           <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
@@ -117,6 +138,12 @@ const Recruiting = () => {
             <label>
               WashU Email:{" "}
               <input type="email" name="washUEmail" value={formData.washUEmail} onChange={handleChange} required />
+            </label>
+          </div>
+          <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
+            <label>
+              Student ID:{" "}
+              <input type="number" name="studentID" value={formData.studentID} onChange={handleChange} required />
             </label>
           </div>
           <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
@@ -135,6 +162,12 @@ const Recruiting = () => {
             <label>
               Emergency Contact Email:{" "}
               <input type="email" name="emergencyContactEmail" value={formData.emergencyContactEmail} onChange={handleChange} required />
+            </label>
+          </div>
+          <div style={{ marginBottom: "16px", display: "grid", gap: "12px" }}>
+            <label>
+              Additional Comments:{" "}
+              <textarea name="additionalComments" value={formData.additionalComments} onChange={handleChange} />
             </label>
           </div>
           <button type="submit" style={{ width: "100%", padding: "12px", fontSize: "1.2rem", backgroundColor: "#007bff", color: "#fff", border: "none", borderRadius: "4px" }}>
