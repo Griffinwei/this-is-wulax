@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";  // Correct import path
+import goalies from "../grantcookethan.jpeg";
 
 const Recruiting = () => {
   const [formData, setFormData] = useState({
@@ -68,6 +69,8 @@ const Recruiting = () => {
     });
   };
 
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <div
       style={{
@@ -82,6 +85,26 @@ const Recruiting = () => {
         boxSizing: "border-box"       // Include padding and border in the element's total width and height
       }}
     >
+      <img src={goalies} style={{ width: "100%", maxWidth: "600px", borderRadius: "8px", margin: "18px"}} alt="Grant Schwartz, David Cook, Ethan Weilheimer"/>
+      <div
+        style={{
+          textAlign: "left",
+          padding: "8px",
+          margin: "18px",
+          backgroundColor: "#D3D3D3",
+          height: "auto",
+          width: "100%",
+          maxWidth: "600px"
+        }}
+      >
+        <h2>FOR INTERESTED PLAYERS</h2>
+        <h4>
+          Did you play lacrosse in high school? Have you never played lacrosse before, but have always wanted to try? Fill out the form below!
+          <br/>
+          <br/>
+          We welcome players of all experience levels, from beginners to seasoned veterans. We are always looking for new players to join our team, regardless of your experience with the sport.
+        </h4>
+      </div>
       {!submitted ? (
         <form
           onSubmit={handleSubmit}
@@ -89,7 +112,8 @@ const Recruiting = () => {
             width: "100%",
             maxWidth: "600px",
             backgroundColor: "#fff",
-            padding: "24px",
+            padding: "8px",
+            margin: "18px",
             borderRadius: "8px",
             boxShadow: "0 0 10px rgba(0,0,0,0.1)"
           }}
