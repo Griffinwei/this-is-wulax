@@ -69,8 +69,6 @@ const Recruiting = () => {
     });
   };
 
-  const isMobile = window.innerWidth <= 768;
-
   return (
     <div
       style={{
