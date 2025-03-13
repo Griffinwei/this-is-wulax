@@ -27,9 +27,6 @@ yarn-error.log*
 .wrangler
 .dev.vars
 
-# Firebase configuration
-src/firebase.js
-
 # Logs
 logs
 *.log
