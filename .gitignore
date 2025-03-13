@@ -164,6 +164,3 @@ dist
 .dev.vars
 .wrangler/
 
-# firebase
-src/firebase.js
-firebase-debug.log
