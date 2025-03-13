@@ -30,7 +30,7 @@ const Donate = () => {
         </h2>
         <br/>
         <h3 style={{ fontSize: "20px", marginBottom: "20px" }}>
-          Note: you can consult <a href="https://financialservices.wustl.edu/wfin-topic/tax-topics/contributions/#:~:text=As%20a%20501(c)(,deductibility%20of%20a%20charitable%20contribution.">this</a> link for more information on the tax deductibility of your donation.
+          Note: you can consult <a href="https://financialservices.wustl.edu/wfin-topic/tax-topics/contributions/#:~:text=As%20a%20501(c)(,deductibility%20of%20a%20charitable%20contribution." target="_blank" rel="noopener noreferrer">this</a> link for more information on the tax deductibility of your donation.
         </h3>
 
       </div>
