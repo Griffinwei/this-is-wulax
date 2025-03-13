@@ -1,4 +1,5 @@
 import React from 'react';
+import goalies from "../grantcookethan.jpeg";
 
 const Donate = () => {
   return (
@@ -15,6 +16,7 @@ const Donate = () => {
         boxSizing: "border-box"       // Include padding and border in the element's total width and height
       }}
     >
+      <img src={goalies} style={{ width: "100%", maxWidth: "600px", borderRadius: "8px", margin: "18px"}} alt="Grant Schwartz, David Cook, Ethan Weilheimer"/>
       <div
         style={{
           padding: "8px",

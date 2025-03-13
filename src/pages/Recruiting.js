@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../firebase";  // Correct import path
-import goalies from "../grantcookethan.jpeg";
+import marty from "../marty.jpeg";
 
 const Recruiting = () => {
   const [formData, setFormData] = useState({
@@ -83,7 +83,7 @@ const Recruiting = () => {
         boxSizing: "border-box"       // Include padding and border in the element's total width and height
       }}
     >
-      <img src={goalies} style={{ width: "100%", maxWidth: "600px", borderRadius: "8px", margin: "18px"}} alt="Grant Schwartz, David Cook, Ethan Weilheimer"/>
+      <img src={marty} style={{ width: "100%", maxWidth: "600px", borderRadius: "8px", margin: "18px"}} alt="Marcus Pimentel"/>
       <div
         style={{
           textAlign: "left",
