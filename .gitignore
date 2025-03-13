@@ -163,3 +163,7 @@ dist
 # wrangler project
 .dev.vars
 .wrangler/
+
+# firebase
+src/firebase.js
+firebase-debug.log
