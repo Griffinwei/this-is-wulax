@@ -1,12 +1,11 @@
 name = "my-worker"
 type = "javascript"
 
-account_id = "1e6f4911724f6fc094b55bf5dbab1c84"
+account_id = "${CF_ACCOUNT_ID}"
 workers_dev = true
 kv_namespaces = [
-  { binding = "FORM_DATA", id = "c6c49d5bf5c044f08cac3accc8b3625d", preview_id = "c6c49d5bf5c044f08cac3accc8b3625d" }
+  { binding = "FORM_DATA", id = "${KV_NAMESPACE_ID}", preview_id = "${KV_NAMESPACE_ID}" }
 ]
 
-# Specify the entry point file
 main = "./workers/worker.js"
 compatibility_date = "2024-07-17"
