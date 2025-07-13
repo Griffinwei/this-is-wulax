@@ -94,6 +94,7 @@ web_modules/
 
 # dotenv environment variable files
 
+accounts.env
 .env
 .env.development.local
 .env.test.local
